@@ -24,7 +24,6 @@ section {
             margin: 3rem 0;
 
             h2 {
-                font-family: 'ProximaNova';
                 font-size: 53px;
                 font-weight: bold;
                 font-stretch: normal;
@@ -32,6 +31,7 @@ section {
                 line-height: normal;
                 letter-spacing: 2.78px;
                 color: $light-blue;
+                margin-bottom: 25px;
             }
 
             p {

@@ -1,17 +1,25 @@
 @font-face {
-    font-family: 'proximanova_semibold';
-    font-weight: 700;
+    font-family: 'Proximanova Semibold';
     src: url('..fonts/proximanova_semibold.woff2')format('woff2');
 }
 
 @font-face {
-    font-family: 'proximanova_regular';
-    font-weight: normal;
+    font-family: 'ProximaNova';
     src: url('..fonts/proximanova_regular.woff2')format('woff2');
 }
 
 @font-face {
     font-family: 'Circular-Std-Medium';
-    font-weight: 500;
     src: url('..fonts/Circular-Std-Medium.otf')format('otf');
+}
+
+
+@font-face {
+    font-family: 'Circular Medium';
+    src: url('/fonts/circular_medium.woff')format('woff');
+}
+
+@font-face {
+    font-family: 'Circular-Medium';
+    src: url('..fonts/circular_medium.ttf')format('ttf');
 }
