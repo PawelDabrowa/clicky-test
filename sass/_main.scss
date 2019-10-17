@@ -1,0 +1,48 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'proximanova';
+    max-width: 1920px;
+    margin: 0 auto;
+}
+
+.orphan {
+    white-space: nowrap;
+}
+
+*:focus {
+    outline: none;
+}
+
+hr {
+    display: none;
+
+    @include mob(1024) {
+        display: block;
+        border: 0;
+        height: 1px;
+        background: #6db1d4;
+        margin: 0px 77px 82px;
+    }
+}
+
+.btn {
+    button {
+        font-size: 17px;
+        width: 260px;
+        height: 63px;
+        padding: 15px 35px;
+        text-transform: uppercase;
+        margin: 0 10px;
+        border-radius: 45px;
+        letter-spacing: 3.98px;
+    }
+}
+
+p {
+    margin-bottom: 40px;
+}

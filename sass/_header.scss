@@ -1,0 +1,47 @@
+header {
+    &#banner {
+        min-height: 90vh;
+        background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+            url(../image/background-banner.png);
+        background-attachment: fixed;
+        background-size: cover;
+        background-repeat: no-repeat;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+
+        .banner-text {
+            margin-bottom: 30px;
+            font-size: 46px;
+            letter-spacing: 3.47px;
+            color: $white;
+
+            @include mob(600) {
+                font-size: 66px;
+            }
+        }
+
+        .banner-text-small {
+            margin-bottom: 30px;
+            padding: 0 1rem;
+            font-size: 27px;
+            font-weight: 600;
+            line-height: 1.59;
+            letter-spacing: 1.42px;
+            color: $white;
+        }
+
+        .banner-btn {
+            button {
+                background: #fff;
+                color: $light-blue;
+                cursor: pointer;
+
+                &:hover {
+                    background: #f9f9f9;
+                }
+            }
+        }
+    }
+}

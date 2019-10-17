@@ -1,0 +1,64 @@
+section {
+    &#video {
+        .video-wrap {
+            display: flex;
+            align-items: center;
+            position: relative;
+
+            .video-control_wrap {
+                position: absolute;
+                display: block;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                cursor: pointer;
+
+                img {
+                    display: block;
+                    width: 70%;
+                    margin: 0 auto;
+
+                    @include mob(480) {
+                        width: 100%;
+                    }
+                }
+            }
+
+            .video-title {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                margin-top: 75px;
+
+                @include mob(320) {
+                    margin-top: 80px;
+                }
+
+                @include mob(480) {
+                    margin-top: 120px;
+                }
+
+                p {
+                    font-family: ProximaNova;
+                    font-size: 15px;
+                    font-weight: bold;
+                    line-height: 1.13;
+                    letter-spacing: 1.63px;
+                    text-align: center;
+                    color: $white;
+                    z-index: 4;
+
+                    @include mob(480) {
+                        margin-top: 20px;
+                    }
+
+                    @include mob(1024) {
+                        font-size: 31px;
+                    }
+                }
+            }
+        }
+    }
+}

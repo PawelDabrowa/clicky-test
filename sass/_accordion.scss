@@ -1,0 +1,163 @@
+section {
+    &#accordion {
+        background-image: linear-gradient(to top, #70b4d7, #194777);
+
+
+        h2 {
+            font-size: 30px;
+            font-weight: bold;
+            letter-spacing: 2.78px;
+            text-align: center;
+            color: $white;
+            margin: 40px 0;
+
+            @include mob(1024) {
+                font-size: 30px;
+            }
+
+        }
+
+        .acc {
+            margin-bottom: 40px;
+
+            dt>a {
+                text-align: left;
+                padding: 2em;
+                display: block;
+                text-decoration: none;
+                font-family: ProximaNova;
+                font-size: 18px;
+                font-weight: 600;
+                line-height: 1.59;
+                letter-spacing: 0.97px;
+                color: $white;
+                -webkit-transition: background-color 0.5s ease-in-out;
+
+                @include mob(319) {
+                    font-size: 22px;
+                }
+            }
+
+            dd {
+                background-color: #fff;
+                font-size: 17px;
+                line-height: 1.5em;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                border-bottom: 1px solid $white;
+
+                >p {
+                    padding: 1em 2em 1em 2em;
+                }
+            }
+
+            position: relative;
+            background-color: transparent;
+        }
+
+        .container {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 10px 0 0 0;
+
+            @include mob(1024) {
+                padding: 40px 0 0 0;
+            }
+        }
+
+        .acc_title {
+            background-color: transparent;
+            border-top: 1px solid $white;
+            cursor: pointer;
+
+            &:before {
+                content: "+";
+                font-size: 1.8em;
+                font-weight: 300;
+                line-height: 1.1em;
+                float: right;
+                padding-left: 10px;
+                transition: transform 0.3s ease-in-out;
+            }
+
+        }
+
+        .acc_title_active {
+            background-color: transparent;
+
+            &:before {
+                transform: rotate(-225deg);
+                transform-origin: center center;
+            }
+        }
+
+        .acc_panel {
+            height: auto;
+            overflow: hidden;
+        }
+
+        @media all {
+            .acc_panel {
+                max-height: 50em;
+                transition: max-height 1s;
+            }
+        }
+
+        @media screen and (min-width: 48em) {
+            .acc_panel {
+                max-height: 15em;
+                transition: max-height 0.5s;
+            }
+        }
+
+        .acc_panel_col {
+            max-height: 0;
+        }
+
+        .anim_in {
+            animation-name: acc_in;
+            animation-duration: 0.65s;
+            animation-iteration-count: 1;
+            animation-direction: normal;
+            animation-timing-function: ease-in-out;
+            animation-fill-mode: both;
+            animation-delay: 0s;
+        }
+
+        .anim_out {
+            animation-name: acc_out;
+            animation-duration: 0.75s;
+            animation-iteration-count: 1;
+            animation-direction: alternate;
+            animation-timing-function: ease-in-out;
+            animation-fill-mode: both;
+            animation-delay: 0s;
+        }
+
+
+        @keyframes acc_in {
+            0% {
+                opacity: 0;
+                transform: scale(0.8);
+            }
+
+            100% {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+
+        @keyframes acc_out {
+            0% {
+                opacity: 1;
+                transform: scale(1);
+            }
+
+            100% {
+                opacity: 0;
+                transform: scale(0.8);
+            }
+        }
+    }
+}

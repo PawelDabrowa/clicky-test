@@ -1,0 +1,89 @@
+/**
+ * MIXIN: Responsive Media Queries.
+ *
+ * Creates responsive media queries for eight different screen sizes.
+ * These are based on min-width which means if x is the size then your
+ * CSS will affect any device with screen width x and above.
+ *
+ * USAGE: 
+ *	@include mob(320)  { }
+ *	@include mob(480)  { }
+ *	@include mob(768)  { }
+ *	@include mob(1024) { }
+ *	@include mob(1140) { }
+ *	@include mob(1280) { }
+ *	@include mob(1580) { }
+ *
+ * CSS content goes inside {} brackets. These mixins should be used inside
+ * a class definition. For example:
+ *
+ * The following CSS will hide the .header on screen width 320px and above.
+ * .header {
+ * 	  @include mob(320)  { display: none; }
+ * }
+ *
+ * 
+ */
+@mixin mob($breakpoint) {
+	@if $breakpoint==320 {
+		@media (min-width: 320px) {
+			@content;
+		}
+	}
+
+
+
+	@if $breakpoint==360 {
+		@media (min-width: 360px) {
+			@content;
+		}
+	}
+
+	@if $breakpoint==400 {
+		@media (min-width: 400px) {
+			@content;
+		}
+	}
+
+	@if $breakpoint==480 {
+		@media (min-width: 480px) {
+			@content;
+		}
+	}
+
+	@if $breakpoint==600 {
+		@media (min-width: 600px) {
+			@content;
+		}
+	}
+
+	@if $breakpoint==768 {
+		@media (min-width: 768px) {
+			@content;
+		}
+	}
+
+	@if $breakpoint==1024 {
+		@media (min-width: 1024px) {
+			@content;
+		}
+	}
+
+	@if $breakpoint==1140 {
+		@media (min-width: 1140px) {
+			@content;
+		}
+	}
+
+	@if $breakpoint==1280 {
+		@media (min-width: 1280px) {
+			@content;
+		}
+	}
+
+	@if $breakpoint==1500 {
+		@media (min-width: 1580px) {
+			@content;
+		}
+	}
+}
